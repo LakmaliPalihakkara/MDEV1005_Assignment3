@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  background: rgb(31, 105, 202);
+}
+
+body {
+  background: #06283D;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: #DFF6FF;
+
 }
 
 .App-logo {

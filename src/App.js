@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
 import API_Page1 from "./components/Tools";
-import Calculator from "./components/Calculator";
+import Calculator from "./components/CurrencyConverter";
 
 
 function App() {

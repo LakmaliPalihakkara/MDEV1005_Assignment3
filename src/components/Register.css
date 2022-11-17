@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #BAD1C2;
 }
 
 .register__container {
@@ -21,18 +22,38 @@
 }
 
 .register__btn {
-  padding: 10px;
   font-size: 18px;
   margin-bottom: 10px;
   border: none;
   color: white;
-  background-color: black;
-}
-
-.register__google {
-  background-color: #4285f4;
+  
+  background-color: #4FA095;
 }
 
 .register div {
   margin-top: 7px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: #153462;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.register-img{
+  width:80%;
+  height: 235%;
+  padding-left: 50px;
+}
+
+#title{
+  margin-bottom: 30px;
+  color: #153462;
 }

@@ -1,38 +1,89 @@
-import React, { useEffect, useState } from "react";
-import Weather from '../components/Weather';
+import React, { Component } from 'react';
+import './Tools.css';
+import ResultComponent from './ResultComponent';
+import KeyPadComponent from "./KeyPadComponent";
 
-export default function Tools() {
+class Tools extends Component {
+    constructor() {
+        super();
 
-  const [lat, setLat] = useState([]);
-  const [long, setLong] = useState([]);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
-      });
-
-    await fetch(`https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${long}&units=metric&APPID=e1fc04a135bdc139bd090698a794593d`)
-      .then(res => res.json())
-      .then(result => {
-        setData(result)
-        console.log(result);
-      });
+        this.state = {
+            result: ""
+        }
     }
-    fetchData();
-  }, [lat,long])
 
-  
-  return (
-    <div className="App">
-      {(typeof data.main != 'undefined') ? (
-        <Weather weatherData={data}/>
-      ): (
-        <div></div>
-      )}
-      
-    </div>
-  );
+    onClick = button => {
+
+
+        if (button === "=") {
+            this.calculate()
+        }
+
+
+        else if (button === "C") {
+            this.reset()
+        }
+
+        else if (button === "CE") {
+            this.clear()
+        }
+
+        else {
+
+            //Set pressed button value
+            this.setState({
+                result: this.state.result + button
+            })
+        }
+    };
+
+    //Get result
+    calculate = () => {
+        try {
+            this.setState({
+                // Eslint disable next line
+                result: (eval(this.state.result) || "") + ""
+            })
+        } catch (e) {
+            this.setState({
+                result: "error"
+            })
+
+        }
+    };
+
+    //Clear all entered numbers
+    reset = () => {
+        this.setState({
+            result: ""
+        })
+    };
+
+    //Clear numbers one by one
+    clear = () => {
+        this.setState({
+            result: this.state.result.slice(0, -1)
+        })
+    };
+
+    render() {
+        return (
+            <div>
+                <div className="tools-body">
+                    <h1 id="title">Calculator</h1>
+                    <div className='calculator'>
+
+                        {/* Get ResultComponent */}
+                        <ResultComponent result={this.state.result} />
+
+
+                        {/* Get KeyPadComponent */}
+                        <KeyPadComponent onClick={this.onClick} />
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
+
+export default Tools;

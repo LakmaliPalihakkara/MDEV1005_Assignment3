@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './components/Login';
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
+import Tools from "./components/Tools";
 import API_Page1 from "./components/Tools";
 import Calculator from "./components/CurrencyConverter";
 
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" element={<Login/>} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/tools" element={<Tools />} />
     </Routes>
   </Router>
 </div>

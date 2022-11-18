@@ -11,7 +11,7 @@ function CurrencyConverter() {
   const [info, setInfo] = useState([]);
   const [input, setInput] = useState(0);
   const [from, setFrom] = useState("usd");
-  const [to, setTo] = useState("inr");
+  const [to, setTo] = useState("cad");
   const [options, setOptions] = useState([]);
   const [output, setOutput] = useState(0);
   
@@ -47,15 +47,18 @@ function CurrencyConverter() {
   return (
     <div className="App">
       <div className="heading">
-        <h1>Currency converter</h1>
+        <h2>Currency Converter</h2>
       </div>
-      <div className="container">
-        <div className="left">
+
+      <div className="card">
+      <div className="top">
           <h3>Amount</h3>
           <input type="text" 
              placeholder="Enter the amount" 
              onChange={(e) => setInput(e.target.value)} />
         </div>
+      <div className="container">
+    
         <div className="middle">
           <h3>From</h3>
           <Dropdown options={options} 
@@ -75,9 +78,9 @@ function CurrencyConverter() {
       </div>
       <div className="result">
         <button onClick={()=>{convert()}}>Convert</button>
-        <h2>Converted Amount:</h2>
+        <h4 className='converted-amount'>Converted Amount:</h4>
         <p>{input+" "+from+" = "+output.toFixed(2) + " " + to}</p>
-  
+        </div>
       </div>
     </div>
   );

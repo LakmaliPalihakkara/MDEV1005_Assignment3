@@ -31,7 +31,7 @@ function Login() {
   return (
     <div className="login">
 
-      <div class="container">
+      <div id ="container">
         <img src={img} class="login-img" alt='logo' />
 
         <div className="login__container">

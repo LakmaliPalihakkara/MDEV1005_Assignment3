@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import moment from 'moment';
-import './APIPage1.css';
+import './WeatherPage.css';
 import image from '../images/all-weather.jpeg'
 
 

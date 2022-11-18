@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import APIPage1 from './APIPage1';
+import WeatherPage from './WeatherPage';
 
 export default function Tools() {
 
@@ -31,7 +31,7 @@ export default function Tools() {
       {(typeof data.main != 'undefined') ? (
 
         // Pass fetched data to APIPage1
-        <APIPage1 weatherData={data}/>
+        <WeatherPage weatherData={data}/>
       ): (
         <div></div>
       )}

@@ -1,19 +1,22 @@
 #title{
     color: #153462;
     text-align: center;
-    margin:50px;
+    padding-top:50px;
   }
 
   .tools-body{
     background-color: #BAD1C2;
     width: 100%;
     height: 100%;
+    padding-bottom: 100px;
+  
   }
 
   .calculator{
     width: 30%;
   margin-left: auto;
   margin-right: auto;
+
   }
 
   #cal-pad{

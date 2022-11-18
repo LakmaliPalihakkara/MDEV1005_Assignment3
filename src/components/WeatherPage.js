@@ -13,7 +13,7 @@ const CardExampleCard = ({ weatherData }) => (
       <h6 class="weather-source">Source: OpenWeather</h6>
 
       <Card id="card" class="col d-flex justify-content-center">
-        <div class="container">
+        <div id="container">
           <div >
 
             {/* Get the city name */}

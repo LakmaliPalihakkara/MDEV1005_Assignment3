@@ -5,7 +5,7 @@ import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
 import Tools from "./components/Tools";
 import WeatherPage from "./components/Weather";
-import Calculator from "./components/CurrencyConverter";
+import CurrencyConverter from "./components/CurrencyConverter";
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/tools" element={<Tools />} />
         <Route exact path="/weather" element={<WeatherPage />} />
+        <Route exact path="/currency_converter" element={<CurrencyConverter />} />
     </Routes>
   </Router>
 </div>

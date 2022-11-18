@@ -1,39 +1,41 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import moment from 'moment';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
- import tools1 from '../images/tools1.jpg'
- import tools2 from '../images/tools2.jpg'
-import Container from 'react-bootstrap/Container';
+import React, { useEffect, useState } from "react";
+import APIPage1 from './APIPage1';
 
+export default function Tools() {
 
-const CardExampleCard = ({weatherData}) => (
-    <div>
+  const [lat, setLat] = useState([]);
+  const [long, setLong] = useState([]);
+  const [data, setData] = useState([]);
 
-<h2 class="tools-topic" >Current Weather Report</h2>
-<h6 class="weather-source">Source: OpenWeather</h6>
+  useEffect(() => {
+    const fetchData = async () => {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      });
 
-    <Card id="card" class="col d-flex justify-content-center">
-       <Card.Body>{weatherData.name}</Card.Body>
-      <ListGroup variant="flush">
-        <ListGroup.Item>Date: {moment().format('LL')}</ListGroup.Item>
-        <ListGroup.Item>Day: {moment().format('dddd')}</ListGroup.Item>
-        <ListGroup.Item>Temprature: {weatherData.main.temp} &deg;C</ListGroup.Item>
-        <ListGroup.Item>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</ListGroup.Item>
-        <ListGroup.Item>Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-IN')}</ListGroup.Item>
-        <ListGroup.Item>Description: {weatherData.weather[0].main}</ListGroup.Item>
-        <ListGroup.Item>Humidity: {weatherData.main.humidity} %</ListGroup.Item>
-     
-       
-      </ListGroup>
-    </Card>
+      // Fetch weather data according to current lat long positions
+    await fetch(`https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${long}&units=metric&APPID=e1fc04a135bdc139bd090698a794593d`)
+      .then(res => res.json())
+      .then(result => {
+        setData(result)
+        console.log(result);
+      });
+    }
+    fetchData();
+  }, [lat,long])
 
+  
+  return (
+    <div className="App">
+      {(typeof data.main != 'undefined') ? (
 
-</div>
-)
-
-
-
-export default CardExampleCard;
+        // Pass fetched data to APIPage1
+        <APIPage1 weatherData={data}/>
+      ): (
+        <div></div>
+      )}
+      
+    </div>
+  );
+}

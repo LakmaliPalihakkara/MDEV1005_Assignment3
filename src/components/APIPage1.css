@@ -1,0 +1,47 @@
+.body{
+  height: 200vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BAD1C2;
+  margin-top: -150px;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#card{
+    color:#06283D;
+    width:100%;
+  }
+
+  .header{
+    background-color: #4FA095;
+    padding: 10px;
+  }
+
+
+.weather-data{
+    text-align: left;
+    color:#06283D;
+   
+}
+
+hr.line {
+    border: 1px solid #4FA095;
+  }
+
+
+  .container {
+    position: relative;
+    text-align: center;
+    color: #153462;
+    background-color: #BAD1C2;
+  }
+
+  .img{
+    width:60%;
+    height: 100%;
+    margin-right: -40px;
+  }

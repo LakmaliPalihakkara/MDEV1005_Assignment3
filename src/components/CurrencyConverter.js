@@ -45,31 +45,56 @@ function CurrencyConverter() {
   }
 
   return (
-    <div className="App">
-      <div className="heading">
-        <h2>Currency Converter</h2>
-      </div>
-
-      <div className="card">
-        <div className="top">
-          <h3>Amount</h3>
-          <input
-            type="text"
-            placeholder="Enter the amount"
-            onChange={(e) => setInput(e.target.value)}
-          />
+    <div className="app">
+      <Sidenav />
+      <div>
+        <div className="heading">
+          <h2>Currency Converter</h2>
         </div>
-        <div className="container">
-          <div className="middle">
-            <h3>From</h3>
-            <Dropdown
-              options={options}
-              onChange={(e) => {
-                setFrom(e.value);
-              }}
-              value={from}
-              placeholder="From"
+
+        <div className="card">
+          <div className="top">
+            <h3>Amount</h3>
+            <input
+              type="text"
+              placeholder="Enter the amount"
+              onChange={(e) => setInput(e.target.value)}
             />
+          </div>
+          <div className="container">
+            <div className="middle">
+              <h3>From</h3>
+              <Dropdown
+                options={options}
+                onChange={(e) => {
+                  setFrom(e.value);
+                }}
+                value={from}
+                placeholder="From"
+              />
+            </div>
+            <div className="result">
+              <button
+                onClick={() => {
+                  convert();
+                }}
+              >
+                Convert
+              </button>
+              <h2>Converted Amount:</h2>
+              <p>{input + " " + from + " = " + output.toFixed(2) + " " + to}</p>
+            </div>
+            <div className="right">
+              <h3>To</h3>
+              <Dropdown
+                options={options}
+                onChange={(e) => {
+                  setTo(e.value);
+                }}
+                value={to}
+                placeholder="To"
+              />
+            </div>
           </div>
           <div className="result">
             <button
@@ -79,31 +104,9 @@ function CurrencyConverter() {
             >
               Convert
             </button>
-            <h2>Converted Amount:</h2>
+            <h4 className="converted-amount">Converted Amount:</h4>
             <p>{input + " " + from + " = " + output.toFixed(2) + " " + to}</p>
           </div>
-          <div className="right">
-            <h3>To</h3>
-            <Dropdown
-              options={options}
-              onChange={(e) => {
-                setTo(e.value);
-              }}
-              value={to}
-              placeholder="To"
-            />
-          </div>
-        </div>
-        <div className="result">
-          <button
-            onClick={() => {
-              convert();
-            }}
-          >
-            Convert
-          </button>
-          <h4 className="converted-amount">Converted Amount:</h4>
-          <p>{input + " " + from + " = " + output.toFixed(2) + " " + to}</p>
         </div>
       </div>
     </div>

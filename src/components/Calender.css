@@ -88,14 +88,21 @@ abbr[title] {
 }
 .calendar-container {
   align-items: center;
+  font-size: 12px;
 }
 
 .overallContainer {
   height: 100vh;
-  width: 100%;
+  width: 30%;
   align-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px;
   background-image: #4fa095;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  margin-top: 20px;
 }

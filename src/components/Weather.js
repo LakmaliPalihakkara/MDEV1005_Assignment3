@@ -28,7 +28,8 @@ export default function Tools() {
   }, [lat, long]);
 
   return (
-    <div className="App">
+    <div className="app">
+      <Sidenav />
       {typeof data.main != "undefined" ? (
         // Pass fetched data to APIPage1
         <WeatherPage weatherData={data} />

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import { auth, db, logout } from "../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
+import Sidenav from "./Sidenav";
 
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
@@ -17,9 +18,10 @@ function Dashboard() {
       setName(data.name);
     } catch (err) {
       console.error(err);
-      alert("An error occured while fetching user data");
+      alert(" ");
     }
   };
+
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/");
@@ -27,15 +29,16 @@ function Dashboard() {
   }, [user, loading]);
   return (
     <div className="dashboard">
-       <div className="dashboard__container">
+      <Sidenav />
+      <div className="dashboard__container">
         Logged in as
-         <div>{name}</div>
-         <div>{user?.email}</div>
-         <button className="dashboard__btn" onClick={logout}>
+        <div>{name}</div>
+        <div>{user?.email}</div>
+        <button className="dashboard__btn" onClick={logout}>
           Logout
-         </button>
-       </div>
-     </div>
+        </button>
+      </div>
+    </div>
   );
 }
 export default Dashboard;

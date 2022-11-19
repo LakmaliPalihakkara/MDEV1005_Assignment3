@@ -1,56 +1,56 @@
-.body{
+.body {
   height: 200vw;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #BAD1C2;
+  background-color: #bad1c2;
   margin-top: -150px;
   padding: 0;
   min-height: 100%;
   min-width: 100%;
 }
 
-#card{
-    color:#06283D;
-    width:100%;
-  }
+#card {
+  color: #06283d;
+  width: 100%;
+}
 
-  .header{
-    background-color: #4FA095;
-    padding: 10px;
-  }
+.header {
+  background-color: #4fa095;
+  padding: 10px;
+}
 
-
-.weather-data{
-    text-align: left;
-    color:#06283D;
-   
+.weather-data {
+  text-align: left;
+  color: #06283d;
 }
 
 hr.line {
-    border: 1px solid #4FA095;
-  }
+  border: 1px solid #4fa095;
+}
 
+.container {
+  position: relative;
+  text-align: center;
+  color: #153462;
+  background-color: #bad1c2;
+}
 
-  #container {
-    height: 300px;
-    width: 800px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  
-  }
+#container {
+  height: 300px;
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-  .img{
-    width:65%;
-    height: 310px;
-    margin-right: -35px;
-    margin-top: -10px;
-   
-  }
-
-
+.img {
+  width: 65%;
+  height: 310px;
+  margin-right: -35px;
+  margin-top: -10px;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones */
@@ -58,15 +58,14 @@ hr.line {
     width: 100%;
   }
 
-  .weather-data{
-   font-size: 15px;
+  .weather-data {
+    font-size: 15px;
   }
 
-  .img{
-    width:50%;
+  .img {
+    width: 50%;
     height: 210px;
     margin-right: -40px;
     margin-top: -10px;
   }
-
 }

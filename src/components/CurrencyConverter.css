@@ -5,15 +5,17 @@
   align-items: center;
   flex-direction: column;
   padding-top: 120px;
-  background-color: #BAD1C2;
+  background-color: #bad1c2;
 }
-.heading{
- 
+.heading {
   font-size: 35px;
 }
 
-.card{
+.card {
   height: 200px;
+}
+.container {
+  height: 300px;
   width: 800px;
   display: flex;
   align-items: center;
@@ -22,7 +24,7 @@
   margin-top: 30px;
 }
 
-.container{
+.container {
   height: 200px;
   width: 800px;
   display: flex;
@@ -32,52 +34,64 @@
   background-color: #ffffff;
 }
 
-input{
+.converterContainer {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  background-image: #4fa095;
+}
+
+input {
   padding-left: 5px;
   font-size: 20px;
   height: 36px;
-  color:#06283D;
+  color: #06283d;
 }
-.middle,.right{
+.middle,
+.right {
   width: 120px;
 }
-.switch{
+.switch {
   padding: 5px;
   margin-top: 25px;
-  background-color: #4FA095;
+  background-color: #4fa095;
   border-radius: 50%;
   cursor: pointer;
 }
-.result{
+.result {
   box-sizing: border-box;
   width: 800px;
   padding-left: 30px;
-  color:#06283D;
+  color: #06283d;
 }
-button{
+button {
   width: 100px;
   height: 30px;
   font-weight: bold;
   font-size: 20px;
   border: 2px solid #153462;
-  background-color: #F6F6C9;
+  background-color: #f6f6c9;
   cursor: pointer;
   margin-bottom: 40px;
 }
-p,h3, button, .switch{
-  color:#06283D;
+p,
+h3,
+button,
+.switch {
+  color: #06283d;
 }
 
-.converted-amount{
-margin-top: 20px;
-color:#4FA095;
+.converted-amount {
+  margin-top: 20px;
+  color: #4fa095;
 }
 
-p{
+p {
   font-size: 30px;
 }
-
-
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones */
@@ -85,9 +99,18 @@ p{
     width: 100%;
   }
 
-  .container, .card{
+  .container,
+  .card {
     height: 200px;
     width: 400px;
   }
-
+}
+p,
+h3,
+button,
+.switch {
+  color: rgb(9, 16, 205);
+}
+p {
+  font-size: 30px;
 }

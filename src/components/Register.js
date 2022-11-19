@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import img from '../images/signin.jpeg'
+import img from "../images/signin.jpeg";
 
-import {
-  auth,
-  registerWithEmailAndPassword
-} from "../firebase";
+import { auth, registerWithEmailAndPassword } from "../firebase";
 
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import "./Register.css";
-
 
 function Register() {
   const [name, setName] = useState("");
@@ -38,7 +34,6 @@ function Register() {
     <div className="register">
       <div id="container">
         <div className="register__container">
-
           <h1 id="title">Register</h1>
 
           {/* Name text input */}
@@ -77,7 +72,7 @@ function Register() {
             Already have an account? <Link to="/">Login</Link> now.
           </div>
         </div>
-        <img src={img} class="register-img" alt='logo' />
+        <img src={img} class="register-img" alt="logo" />
       </div>
     </div>
   );

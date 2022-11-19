@@ -1,0 +1,13 @@
+NavLink {
+  color: aliceblue;
+}
+
+.servicesContainer {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  background-image: #4fa095;
+}

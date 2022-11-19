@@ -1,46 +1,42 @@
-#title{
-    color: #153462;
-    text-align: center;
-    margin:50px;
-  }
+#title {
+  color: #153462;
+  text-align: center;
+  margin: 50px;
+}
 
-  .tools-body{
-    background-color: #BAD1C2;
-    width: 100%;
-    height: 100%;
-  }
+.tools-body {
+  background-color: #bad1c2;
+  width: 100%;
+  height: 100%;
+}
 
-  .calculator{
-    width: 30%;
+.calculator {
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
-  }
+}
 
-  #cal-pad{
-    width: 100px;
-    height: 50px;
-    font-weight: bold;
-    font-size: 25px;
-    border: 2px solid #4FA095;
-    background-color: #F6F6C9;
-    color: #153462;
-    cursor: pointer;
-  }
+#cal-pad {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 25px;
+  border: 2px solid #4fa095;
+  background-color: #f6f6c9;
+  color: #153462;
+  cursor: pointer;
+}
 
-  #display{
-    width: 52%;
-    height: 60px;
-    margin-left: -30px;
-    border: 2px solid #4FA095;
-    
-   
-  }
+#display {
+  width: 52%;
+  height: 60px;
+  margin-left: -30px;
+  border: 2px solid #4fa095;
+}
 
-  .result{
-    color: #1c3253;
-  }
-
-
+.result {
+  color: #1c3253;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones */
@@ -48,13 +44,20 @@
     width: 100%;
   }
 
-  #display{
-  width: 26%;
+  #display {
+    width: 26%;
   }
 
-  .buttons{
+  .buttons {
     width: 190%;
-    
   }
+}
 
+.containerCalender {
+  height: 100vh;
+  width: 100%;
+  align-content: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: #4fa095;
 }

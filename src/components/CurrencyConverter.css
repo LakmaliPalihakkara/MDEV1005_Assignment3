@@ -7,38 +7,49 @@
   padding-top: 120px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
-.heading{
- 
+.heading {
   font-size: 35px;
 }
-.container{
+.container {
   height: 300px;
   width: 800px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-input{
+
+.converterContainer {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  background-image: #4fa095;
+}
+
+input {
   padding-left: 5px;
   font-size: 20px;
   height: 36px;
 }
-.middle,.right{
+.middle,
+.right {
   width: 120px;
 }
-.switch{
+.switch {
   padding: 5px;
   margin-top: 25px;
   background-color: rgb(8, 212, 192);
   border-radius: 50%;
   cursor: pointer;
 }
-.result{
+.result {
   box-sizing: border-box;
   width: 800px;
   padding-left: 30px;
 }
-button{
+button {
   width: 100px;
   height: 30px;
   font-weight: bold;
@@ -47,9 +58,12 @@ button{
   background-color: rgb(35, 184, 225);
   cursor: pointer;
 }
-p,h3, button, .switch{
+p,
+h3,
+button,
+.switch {
   color: rgb(9, 16, 205);
 }
-p{
+p {
   font-size: 30px;
 }

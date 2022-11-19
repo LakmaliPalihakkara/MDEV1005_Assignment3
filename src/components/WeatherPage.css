@@ -3,13 +3,15 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-color: #bad1c2;
   padding: 0;
 }
 
 #card {
   color: #06283d;
   width: 100%;
+  margin-top: 10px;
+  height: 70%;
+  margin-left: 0px;
 }
 
 .header {
@@ -41,14 +43,26 @@ hr.line {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
+ 
 }
 
 .img {
   width: 65%;
-  height: 310px;
-  margin-right: -35px;
-  margin-top: -10px;
+  height: 270px;
+  margin-right: -25px;
+  margin-top: 50px;
+ 
 }
+
+#name
+  {
+    margin-top: 50px;
+  }
+
+  .tools-topic, .weather-source{
+    text-align: center;
+  }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones */
@@ -66,4 +80,6 @@ hr.line {
     margin-right: -40px;
     margin-top: -10px;
   }
+
+  
 }

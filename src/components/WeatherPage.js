@@ -15,7 +15,7 @@ const CardExampleCard = ({ weatherData }) => (
         <div class="container">
           <div>
             {/* Get the city name */}
-            <h3 className="weather-data">{weatherData.name}</h3>
+            <h3 id="name" className="weather-data">{weatherData.name}</h3>
 
             {/* Get the current date */}
             <h5 className="weather-data">{moment().format("LL")}</h5>

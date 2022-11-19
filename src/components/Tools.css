@@ -4,17 +4,17 @@
   padding-top: 50px;
 }
 
-.tools-body {
-  background-color: #bad1c2;
+.container-cal{
   width: 100%;
   height: 100%;
-  padding-bottom: 100px;
+
 }
 
 .calculator {
-  width: 60%;
+  width: 35%;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 #cal-pad {
@@ -46,11 +46,11 @@
   }
 
   #display {
-    width: 26%;
+    width: 30%;
   }
 
   .buttons {
-    width: 190%;
+    width: 150%;
   }
 }
 

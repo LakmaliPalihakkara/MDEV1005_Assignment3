@@ -60,7 +60,7 @@ class Tools extends Component {
     return (
       <div className="app">
         <Sidenav />
-        <div className="containerCalender">
+        <div className="container-cal">
           <div className="tools-body">
             <h1 id="title">Calculator</h1>
             <div className="calculator">

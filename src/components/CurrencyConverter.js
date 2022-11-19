@@ -73,17 +73,12 @@ function CurrencyConverter() {
                 placeholder="From"
               />
             </div>
-            <div className="result">
-              <button
-                onClick={() => {
-                  convert();
-                }}
-              >
-                Convert
-              </button>
-              <h2>Converted Amount:</h2>
-              <p>{input + " " + from + " = " + output.toFixed(2) + " " + to}</p>
-            </div>
+
+            <div className="switch">
+          <HiSwitchHorizontal size="30px" 
+                        onClick={() => { flip()}}/>
+        </div>
+         
             <div className="right">
               <h3>To</h3>
               <Dropdown
